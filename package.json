@@ -1,0 +1,33 @@
+{
+  "name": "@zmzhoi/eslint-config-zmzhoi",
+  "version": "0.0.0",
+  "description": "This package is a shareable eslint config for react project.",
+  "main": "index.js",
+  "keywords": [
+    "eslint",
+    "shareable eslint config",
+    "eslintconfig",
+    "react",
+    "create-react-app"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "author": "zmzhoi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zmzhoi/eslint-config-zmzhoi"
+  },
+  "homepage": "https://github.com/zmzhoi/eslint-config-zmzhoi",
+  "scripts": {
+    "publish:pre": "npm version prerelease && git push origin master --tags",
+    "publish:patch": "npm version patch && git push origin master --tags",
+    "publish:minor": "npm version minor && git push origin master --tags",
+    "publish:major": "npm version major && git push origin master --tags"
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "8.5.0"
+  }
+}
