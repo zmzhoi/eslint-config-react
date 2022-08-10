@@ -1,11 +1,12 @@
 module.exports = {
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+  },
   env: {
     browser: true,
     es6: true,
     node: true,
-  },
-  parserOptions: {
-    ecmaVersion: 2020,
   },
   extends: ['airbnb', 'airbnb/hooks', 'prettier'],
   rules: {
