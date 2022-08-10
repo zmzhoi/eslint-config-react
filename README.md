@@ -1,17 +1,21 @@
 # @zmzhoi/eslint-config-react
 
-> This package is a shareable eslint config for react project.
+> This package is a eslint sharable config for `React` project. 👍
 
-## Notice
+## Notice❗️
 
-- Dependencies:
+- `Dependencies`:
   ```
   {
+    "@babel/eslint-parser": "7.18.9",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "8.5.0"
   }
   ```
-- Required version of `eslint` is : `^7.32.0` || `^8.2.0`
+
+- `@zmzhoi/eslint-config-react` requires belows:
+  - `eslint : ^7.32.0 || ^8.2.0`
+  - `@babel/core : >= 7.11.0`
 
 ## Usage
 
