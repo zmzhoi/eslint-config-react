@@ -17,6 +17,8 @@
   - `eslint : ^7.32.0 || ^8.2.0`
   - `@babel/core : >= 7.11.0`
 
+- You must have babel config file(`eg. .babelrc`) in the root folder of your project.
+  
 ## Usage
 
 Installation:
