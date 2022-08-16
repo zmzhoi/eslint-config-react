@@ -1,15 +1,34 @@
 module.exports = {
   parser: '@babel/eslint-parser',
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 2018,
+    ecmaFeatures: {
+      jsx: true,
+    },
+    sourceType: 'module',
+    requireConfigFile: false,
   },
   env: {
     browser: true,
     es6: true,
     node: true,
   },
-  extends: ['airbnb', 'airbnb/hooks', 'prettier'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'prettier',
+  ],
+  plugins: ['import', 'jsx-a11y'],
   rules: {
+    'react/display-name': ['off', { ignoreTranspilerName: false }],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
     'no-else-return': 0,
     'prefer-object-spread': 0,
     'react/destructuring-assignment': 0,
@@ -35,7 +54,7 @@ module.exports = {
     'consistent-return': 0,
     'import/no-named-as-default-member': 0,
     'import/order': [
-      'error',
+      'warn',
       {
         'newlines-between': 'always',
         groups: [
@@ -47,7 +66,7 @@ module.exports = {
         ],
         pathGroups: [
           {
-            pattern: '~**/**',
+            pattern: '@**/**',
             group: 'internal',
           },
         ],
@@ -55,4 +74,29 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['**/*.ts?(x)'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        ecmaVersion: 2018,
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      plugins: ['@typescript-eslint'],
+      rules: {
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': [
+          'warn',
+          {
+            args: 'none',
+            ignoreRestSiblings: true,
+          },
+        ],
+        // ... will be included
+      },
+    },
+  ],
 };
