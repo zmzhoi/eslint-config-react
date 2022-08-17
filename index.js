@@ -1,12 +1,15 @@
+const { hasBabelConfigFile } = require('./utils');
+
+var hasBabel = hasBabelConfigFile();
+
 module.exports = {
-  parser: '@babel/eslint-parser',
+  parser: hasBabel ? '@babel/eslint-parser' : undefined,
   parserOptions: {
     ecmaVersion: 2018,
     ecmaFeatures: {
       jsx: true,
     },
     sourceType: 'module',
-    requireConfigFile: false,
   },
   env: {
     browser: true,
@@ -84,6 +87,7 @@ module.exports = {
         ecmaFeatures: {
           jsx: true,
         },
+        warnOnUnsupportedTypeScriptVersion: true,
       },
       plugins: ['@typescript-eslint'],
       extends: [
