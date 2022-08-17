@@ -11,7 +11,8 @@
     "create-react-app"
   ],
   "files": [
-    "index.js"
+    "index.js",
+    "utils.js"
   ],
   "author": "zmzhoi",
   "license": "MIT",
