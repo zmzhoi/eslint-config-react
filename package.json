@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/zmzhoi/eslint-config-react",
   "scripts": {
+    "format":"prettier --check \"**/*.(js|json|mjs|cjs|md)\"",
+    "format:fix":"prettier --write \"**/*.(js|json|mjs|cjs|md)\"",
     "publish:pre": "npm version prerelease && git push origin master --tags",
     "publish:patch": "npm version patch && git push origin master --tags",
     "publish:minor": "npm version minor && git push origin master --tags",
@@ -39,5 +41,9 @@
   },
   "peerDependencies": {
     "eslint": "^8.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "prettier": "^2.7.1"
   }
 }
