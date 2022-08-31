@@ -1,4 +1,4 @@
-const { readdirSync } = require("fs");
+const { readdirSync } = require('fs');
 
 function hasBabelConfigFile() {
   const rootPath = process.cwd();
@@ -11,9 +11,7 @@ function hasBabelConfigFile() {
 
   const files = readdirSync(rootPath);
 
-  return files.some((file) =>
-    babelConfigFileRegexList.some((regex) => regex.test(file))
-  );
+  return files.some((file) => babelConfigFileRegexList.some((regex) => regex.test(file)));
 }
 
 module.exports = {
