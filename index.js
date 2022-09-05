@@ -101,5 +101,13 @@ module.exports = {
         // ... will be included
       },
     },
+    {
+      files: ['**/__tests__/**/*', '**/*.{spec,test}.*'],
+      extends: ['plugin:jest/recommended'],
+      plugins: ['testing-library'],
+      env: {
+        'jest/globals': true,
+      },
+    },
   ],
 };
