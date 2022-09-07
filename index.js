@@ -90,15 +90,17 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
       ],
       rules: {
-        'no-unused-vars': 'off',
+        '@typescript-eslint/no-extra-semi': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-unused-vars': [
           'warn',
           {
-            args: 'none',
+            argsIgnorePattern: '^_',
+            varsIgnorePattern: '^_',
+            caughtErrorsIgnorePattern: '^_',
             ignoreRestSiblings: true,
           },
         ],
-        // ... will be included
       },
     },
     {
@@ -107,6 +109,11 @@ module.exports = {
       plugins: ['testing-library'],
       env: {
         'jest/globals': true,
+      },
+      rules: {
+        'jest/no-focused-tests': 'off',
+        'jest/expect-expect': 'off',
+        'jest/no-done-callback': 'off',
       },
     },
   ],
