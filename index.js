@@ -90,6 +90,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
       ],
       rules: {
+        '@typescript-eslint/no-empty-interface': 'off',
         '@typescript-eslint/no-extra-semi': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-unused-vars': [
