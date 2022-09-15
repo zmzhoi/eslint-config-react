@@ -1,4 +1,5 @@
 # @zmzhoi/eslint-config-react
+
 > This package is a eslint sharable config for `React` project.
 
 `eslint@8` is required as a peer.
@@ -12,6 +13,7 @@ Installation:
 ```
 
 Then create `.eslintrc.js` file with following contents in the root folder of your project:
+
 `.eslintrc.js`
 
 ```
