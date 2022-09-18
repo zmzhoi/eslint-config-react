@@ -25,6 +25,21 @@ module.exports = {
 };
 ```
 
+## Alias of internal module
+The alias of internal module is `@/**/**`
+
+As you know, you need to set configuration file in order to use alias. like jsconfig.json, tsconfig.json.
+> Don't forget to set alias in `webpack.config.js` when you use `webpack`
+
+**The internal module will be placed on the next line with the external module. like this:**
+```
+
+  import * as _ from 'lodash'; // External module.
+  // new line. 
+  import LoginForm from '@/components/LoginForm'; // <- Internal module will be placed here.
+
+```
+
 ## LICENSE
 
 [MIT.](LICENSE)
