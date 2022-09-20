@@ -23,6 +23,7 @@ module.exports = {
     browser: true, // 브라우저 전역 변수 사용(e.g. window, IntersectionObserver, etc)
     es6: true, // ES6 전역 변수 사용(e.g. Promise, etc)
     node: true, // NodeJS 전역 변수 사용(e.g. process, etc)
+    commonjs: true, // CommonJS 전역 변수 사용
   },
 
   // ..
@@ -157,6 +158,7 @@ module.exports = {
 
       // [테스트 관련 전역 변수 사용 설정]
       env: {
+        jest: true, // Jest 전역 변수 사용 (e.g. jest)
         'jest/globals': true, // Jest 전역 변수 사용 (e.g. describe, it, test, etc)
       },
 
