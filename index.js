@@ -48,6 +48,7 @@ module.exports = {
 
   // 추가 룰 적용.
   rules: {
+    'react/jsx-filename-extension': ['error', { extensions: ['.jsx'] }],
     'react/display-name': ['off', { ignoreTranspilerName: false }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
@@ -58,10 +59,20 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': 0,
     'func-names': 0,
     'react/require-default-props': 0,
-    'no-unused-vars': 1,
+    'no-unused-vars': [
+      'warn',
+      {
+        // underscore pattern 변수는 no-unused-vars 옵션에서 제외
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_',
+        ignoreRestSiblings: true,
+      },
+    ],
     'no-console': 0,
     'react/react-in-jsx-scope': 0,
     'react/forbid-prop-types': 0,
+    'react/prop-types': 0,
     'no-restricted-exports': 0,
     'import/no-extraneous-dependencies': 0,
     'import/no-unresolved': 0,
@@ -128,6 +139,7 @@ module.exports = {
 
       // 추가 룰 적용.
       rules: {
+        'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
         '@typescript-eslint/no-empty-interface': 'off',
         '@typescript-eslint/no-extra-semi': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
