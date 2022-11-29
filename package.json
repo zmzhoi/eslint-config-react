@@ -1,7 +1,7 @@
 {
   "name": "@zmzhoi/eslint-config-react",
   "version": "4.0.0",
-  "description": "This package is a eslint sharable config for React project.",
+  "description": "⛔️ DEPRECATED",
   "main": "index.js",
   "keywords": [
     "eslint",
